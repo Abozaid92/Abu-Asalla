@@ -1,0 +1,41 @@
+{
+  "name": "abu-asala-decor",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev",
+    "db:seed": "tsx prisma/seed.ts"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.19.2",
+    "@tiptap/core": "^3.27.4",
+    "@tiptap/extension-image": "^3.27.4",
+    "@tiptap/extension-link": "^3.27.4",
+    "@tiptap/html": "^3.27.4",
+    "@tiptap/starter-kit": "^3.27.4",
+    "bcryptjs": "latest",
+    "framer-motion": "^12.42.2",
+    "next": "^15.5.20",
+    "next-auth": "5.0.0-beta.31",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "react-hook-form": "latest",
+    "zod": "latest"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.2",
+    "@tailwindcss/typography": "^0.5.20",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "eslint-config-next": "^15.5.20",
+    "postcss": "^8.5.19",
+    "prisma": "^6.19.2",
+    "tailwindcss": "^4.3.2",
+    "tsx": "latest",
+    "typescript": "5.8.2"
+  }
+}

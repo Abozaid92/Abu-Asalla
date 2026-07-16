@@ -1,0 +1,212 @@
+{
+  "categories": [
+    { "id": "cat_paint_interior", "name": "دهانات داخلية", "slug": "interior-painting", "scope": "SERVICE" },
+    { "id": "cat_paint_exterior", "name": "دهانات خارجية وواجهات", "slug": "exterior-painting-facades", "scope": "SERVICE" },
+    { "id": "cat_gypsum", "name": "ديكورات جبس بورد", "slug": "gypsum-board-decor", "scope": "SERVICE" },
+    { "id": "cat_wood_alt", "name": "بديل الخشب وشيبورد", "slug": "wood-alternative-cladding", "scope": "SERVICE" },
+    { "id": "cat_insulation", "name": "عزل صوت وحراري", "slug": "sound-thermal-insulation", "scope": "SERVICE" },
+    { "id": "cat_wallpaper", "name": "ورق جدران", "slug": "wallpaper", "scope": "SERVICE" },
+    { "id": "cat_marble_alt", "name": "بديل الرخام", "slug": "marble-alternative", "scope": "SERVICE" },
+    { "id": "cat_mirrors_tv", "name": "ديكور مرايا وشاشات تلفزيون", "slug": "mirrors-tv-wall-decor", "scope": "SERVICE" },
+
+    { "id": "cat_proj_walls", "name": "تجليد جدران وحوائط", "slug": "wall-cladding", "scope": "PROJECT" },
+    { "id": "cat_proj_tv_walls", "name": "ديكور جدار وخلفية تلفزيون", "slug": "tv-wall-decor", "scope": "PROJECT" },
+    { "id": "cat_proj_entrance", "name": "ديكور مدخل ورسبشن", "slug": "entrance-reception-decor", "scope": "PROJECT" },
+    { "id": "cat_proj_bedroom", "name": "ديكور غرف نوم", "slug": "bedroom-decor", "scope": "PROJECT" },
+    { "id": "cat_proj_majlis", "name": "ديكور مجالس وصالات", "slug": "majlis-living-room-decor", "scope": "PROJECT" },
+    { "id": "cat_proj_doors", "name": "أبواب وإضاءة ديكورية", "slug": "doors-decorative-lighting", "scope": "PROJECT" }
+  ],
+
+  "services": [
+    {
+      "id": "srv_paint_interior",
+      "name": "دهانات داخلية الرياض",
+      "slug": "interior-painting-riyadh",
+      "categoryId": "cat_paint_interior",
+      "shortDescription": "معلم دهانات داخلية بالرياض لتنفيذ دهان شقق وفلل وصالات بأحدث الألوان والخامات",
+      "content": "[TODO: expand to 1600-2400 كلمة] محتوى عن دهانات داخلية للجدران، دهانات صالات، دهانات مطابخ، دهانات غرف نوم، أنواع البويات (بلاستيك، ساتان، لامع)، دهانات جوتن والجزيرة، خطوات التنفيذ، الأسعار التقريبية، ولماذا أبو أصالة هو الأفضل في الرياض.",
+      "heroImage": "https://res.cloudinary.com/dfhecwiib/image/upload/v1784036329/66e5234c-bb26-4860-b7a4-6f730a308650_by1oce.png",
+      "gallery": ["https://res.cloudinary.com/dfhecwiib/image/upload/v1784036329/66e5234c-bb26-4860-b7a4-6f730a308650_by1oce.png"],
+      "steps": [
+        { "title": "معاينة ومعرفة المساحة", "description": "زيارة الموقع وتحديد نوع الجدران والمساحة المطلوب دهانها" },
+        { "title": "تجهيز الأسطح", "description": "تنظيف وتسوية الجدران وإزالة أي تشققات قبل الدهان" },
+        { "title": "اختيار الألوان والخامة", "description": "اختيار نوع الدهان (بلاستيك، ساتان، لامع) واللون المناسب" },
+        { "title": "التنفيذ والتشطيب", "description": "دهان الجدران بعدد الأوجه المطلوبة وتسليم العمل نظيفاً" }
+      ],
+      "priceNote": "السعر حسب المساحة ونوع الدهان - اطلب عرض سعر مخصص",
+      "metaTitle": "دهانات داخلية الرياض | معلم دهانات وبويات جوتن - أبو أصالة",
+      "metaDescription": "معلم دهانات داخلية بالرياض لتنفيذ دهان الشقق والفلل والصالات بألوان جوتن والجزيرة، اسعار تنافسية وتشطيب فاخر. اطلب عرض سعر الآن.",
+      "keywords": ["دهانات داخلية الرياض", "معلم دهانات الرياض", "دهان بويه الرياض", "دهان داخلي بالرياض", "اسعار الدهانات في الرياض", "دهانات جوتن الرياض", "دهانات داخلية للجدران", "دهانات داخلية مودرن", "افضل دهان داخلي الرياض", "سعر متر الدهان الرياض", "دهانات داخلية صالات", "دهانات داخلية مطابخ"],
+      "isActive": true
+    },
+    {
+      "id": "srv_paint_exterior",
+      "name": "دهانات خارجية وواجهات فلل الرياض",
+      "slug": "exterior-painting-facades-riyadh",
+      "categoryId": "cat_paint_exterior",
+      "shortDescription": "تنفيذ دهانات خارجية وواجهات فلل وبروفايل خارجي بالرياض بأحدث التصاميم",
+      "content": "[TODO: expand to 1600-2400 كلمة] محتوى عن دهان خارجي للمنازل والفلل، دهان بروفايل خارجي، دهانات كسر رخام جرافيت، دهانات مقاومة للعوامل الجوية، الفرق بين الدهان الزيتي والبلاستيك الخارجي.",
+      "heroImage": "https://res.cloudinary.com/dfhecwiib/image/upload/v1784036391/0edc0229-ef9f-47cb-a051-a519ea137119_fxmunp.png",
+      "gallery": ["https://res.cloudinary.com/dfhecwiib/image/upload/v1784036391/0edc0229-ef9f-47cb-a051-a519ea137119_fxmunp.png"],
+      "steps": [
+        { "title": "معاينة الواجهة", "description": "تحديد نوع السطح الخارجي (حجر، بروفايل، خرسانة)" },
+        { "title": "تجهيز ومعالجة الشروخ", "description": "معالجة الشروخ والرطوبة قبل الدهان الخارجي" },
+        { "title": "دهان الأساس", "description": "طبقة أساس مقاومة للعوامل الجوية" },
+        { "title": "التشطيب النهائي", "description": "دهان الوجه النهائي بالشكل المطلوب (خطوط، دوائر، مسطح)" }
+      ],
+      "priceNote": "يُحسب سعر متر البروفايل الخارجي حسب التصميم - اطلب عرض سعر مخصص",
+      "metaTitle": "دهانات خارجية وواجهات فلل الرياض | معلم بروفايل خارجي - أبو أصالة",
+      "metaDescription": "تنفيذ دهانات خارجية للفلل والمنازل بالرياض، دهان بروفايل خارجي وواجهات حجر بأسعار تنافسية وجودة عالية. اطلب معاينة مجانية.",
+      "keywords": ["دهانات خارجية الرياض", "معلم بروفايل الرياض", "دهان خارجي للمنازل بالرياض", "دهان بروفايل خارجي", "واجهات فلل حجر وبروفايل", "دهان خارجي بروفايل الرياض", "افضل بويه خارجية للفلل", "دهانات واجهات خارجية الرياض", "اسعار الدهانات الخارجية الرياض"],
+      "isActive": true
+    },
+    {
+      "id": "srv_gypsum",
+      "name": "ديكورات جبس بورد الرياض",
+      "slug": "gypsum-board-decor-riyadh",
+      "categoryId": "cat_gypsum",
+      "shortDescription": "تصميم وتركيب ديكورات جبس بورد أسقف وجدران مع إضاءة مخفية بالرياض",
+      "content": "[TODO: expand to 1600-2400 كلمة] محتوى عن أسقف جبس بورد معلقة، جبس بورد مع إضاءة مخفية، جبس بورد للمجالس والصالات، جبس بورد للمطابخ، الفرق بين الجبس العادي والمقاوم للرطوبة.",
+      "heroImage": "https://res.cloudinary.com/dfhecwiib/image/upload/v1784036396/8a3d2600-de50-4cfb-90ca-a6e6c2f1c2cf_dsom2p.png",
+      "gallery": ["https://res.cloudinary.com/dfhecwiib/image/upload/v1784036396/8a3d2600-de50-4cfb-90ca-a6e6c2f1c2cf_dsom2p.png"],
+      "steps": [
+        { "title": "التصميم", "description": "تصميم شكل الجبس بورد للسقف أو الجدار مع الإضاءة المخفية" },
+        { "title": "تجهيز الهيكل المعدني", "description": "تركيب القوائم المعدنية الحاملة للألواح" },
+        { "title": "تركيب الألواح", "description": "تثبيت ألواح الجبس بورد وتشكيلها حسب التصميم" },
+        { "title": "التشطيب والدهان", "description": "معالجة الفواصل والصنفرة ثم الدهان النهائي" }
+      ],
+      "priceNote": "يُحسب السعر حسب المتر المربع ونوع التصميم - اطلب عرض سعر مخصص",
+      "metaTitle": "ديكورات جبس بورد الرياض | اسقف معلقة وجدران جبسية - أبو أصالة",
+      "metaDescription": "تركيب ديكورات جبس بورد أسقف معلقة وجدران مزخرفة بالرياض مع إضاءة مخفية، تصاميم مودرن وكلاسيك. اطلب عرض سعر الآن.",
+      "keywords": ["معلم جبس بورد الرياض", "سعر متر الجبس بورد مع التركيب", "اسقف جبس بورد حديثة", "جبس بورد مع اضاءة مخفية", "ديكورات جبس بورد الرياض", "جبس بورد جدران الرياض", "اسعار جبس بورد الرياض", "جبس بورد للمجالس", "تركيب جبس بورد بالرياض"],
+      "isActive": true
+    },
+    {
+      "id": "srv_wood_alt",
+      "name": "بديل الخشب وشيبورد الرياض",
+      "slug": "wood-alternative-cladding-riyadh",
+      "categoryId": "cat_wood_alt",
+      "shortDescription": "تركيب بديل الخشب وشيبورد للجدران والتلفزيون والمداخل بالرياض",
+      "content": "[TODO: expand to 1600-2400 كلمة] محتوى عن بديل الخشب WPC، شيبورد للجدران، ديكور تلفزيون بديل خشب، بديل الخشب للواجهات الخارجية، الفرق بين WPC وPVC.",
+      "heroImage": "https://res.cloudinary.com/dfhecwiib/image/upload/v1784036400/fcc96f93-0982-4aa1-a53e-5814a238056b_o3t1pq.png",
+      "gallery": ["https://res.cloudinary.com/dfhecwiib/image/upload/v1784036400/fcc96f93-0982-4aa1-a53e-5814a238056b_o3t1pq.png"],
+      "steps": [
+        { "title": "قياس الجدار", "description": "أخذ القياسات الدقيقة للمساحة المطلوب تكسيتها" },
+        { "title": "اختيار نوع الألواح", "description": "اختيار WPC أو PVC حسب مكان التركيب (داخلي/خارجي)" },
+        { "title": "تجهيز السطح", "description": "تسوية الحائط والتأكد من خلوه من الرطوبة" },
+        { "title": "التركيب والتثبيت", "description": "قص وتركيب الألواح مع معالجة الزوايا والفواصل" }
+      ],
+      "priceNote": "السعر حسب نوع الألواح والمساحة - اطلب عرض سعر مخصص",
+      "metaTitle": "بديل الخشب وشيبورد الرياض | تكسيات جدران WPC - أبو أصالة",
+      "metaDescription": "تركيب بديل الخشب وشيبورد للجدران والمداخل وخلفيات التلفزيون بالرياض، خامات WPC مقاومة للرطوبة والحرارة. اطلب عرض سعر الآن.",
+      "keywords": ["بديل الخشب الرياض", "معلم بديل خشب الرياض", "شيبورد الرياض", "اسعار شرائح WPC الرياض", "بديل خشب للجدران", "ديكور تلفزيون بديل خشب", "تكسيات جدران داخلية الرياض", "بديل الخشب للمجالس", "سعر متر بديل الخشب الرياض"],
+      "isActive": true
+    },
+    {
+      "id": "srv_insulation",
+      "name": "عزل صوت وحراري للجدران الرياض",
+      "slug": "sound-thermal-insulation-riyadh",
+      "categoryId": "cat_insulation",
+      "shortDescription": "تركيب عوازل صوتية وحرارية للجدران والأسقف بالرياض بأحدث الخامات",
+      "content": "[TODO: expand to 1600-2400 كلمة] محتوى عن عزل صوت الجدران والأسقف والأبواب، الصوف الصخري، عزل حراري لتقليل فاتورة الكهرباء، عزل صوت الاستوديوهات والمجالس.",
+      "heroImage": "https://res.cloudinary.com/dfhecwiib/image/upload/v1784036469/5437ebd8-1770-499e-8a46-582fe39b0ad5_dxhkvl.png",
+      "gallery": ["https://res.cloudinary.com/dfhecwiib/image/upload/v1784036469/5437ebd8-1770-499e-8a46-582fe39b0ad5_dxhkvl.png"],
+      "steps": [
+        { "title": "تحديد مصدر الضجيج", "description": "معاينة الجدران والأبواب والنوافذ لتحديد نقاط تسرب الصوت" },
+        { "title": "اختيار مادة العزل", "description": "صوف صخري، فوم، أو ألواح عازلة حسب نسبة العزل المطلوبة" },
+        { "title": "تركيب طبقات العزل", "description": "تركيب الطبقات بالترتيب الفني الصحيح" },
+        { "title": "التشطيب الداخلي", "description": "تغطية العزل بجبس بورد أو قماش وتشطيب نهائي أنيق" }
+      ],
+      "priceNote": "السعر حسب عدد الطبقات ونسبة العزل المطلوبة - اطلب عرض سعر مخصص",
+      "metaTitle": "عزل صوت وحراري للجدران الرياض | عوازل صوتية - أبو أصالة",
+      "metaDescription": "تركيب عوازل صوت وحرارية للجدران والأسقف والغرف بالرياض، خصوصية تامة وتوفير في فاتورة الكهرباء. اطلب معاينة مجانية الآن.",
+      "keywords": ["عزل صوت الرياض", "عازل صوتي للجدران", "عزل صوت للغرف الرياض", "عزل حراري للجدران الرياض", "شركة عزل صوت الجدران", "اسعار عزل الصوت للغرف", "الصوف الصخري عزل صوت", "عوازل صوت للابواب والجدران"],
+      "isActive": true
+    },
+    {
+      "id": "srv_wallpaper",
+      "name": "ورق جدران الرياض",
+      "slug": "wallpaper-riyadh",
+      "categoryId": "cat_wallpaper",
+      "shortDescription": "تركيب ورق جدران وورق حائط ثلاثي الأبعاد بتصاميم عصرية بالرياض",
+      "content": "[TODO: expand to 1600-2400 كلمة] محتوى عن ورق جدران ثلاثي الأبعاد، ورق حائط عازل للصوت، ورق جدران فندقي، أنواع ورق الجدران المستوردة.",
+      "heroImage": "https://res.cloudinary.com/dfhecwiib/image/upload/v1784036479/680f47e1-e93e-4f43-a0b6-4204abebf751_xw8y1g.png",
+      "gallery": ["https://res.cloudinary.com/dfhecwiib/image/upload/v1784036479/680f47e1-e93e-4f43-a0b6-4204abebf751_xw8y1g.png"],
+      "steps": [
+        { "title": "اختيار التصميم", "description": "اختيار نوع ورق الجدران والباترون المناسب للمساحة" },
+        { "title": "تجهيز الحائط", "description": "تسوية الجدار وتنظيفه من الغبار والدهون" },
+        { "title": "تركيب الورق", "description": "قص ولصق الورق مع محاذاة دقيقة للباترون" },
+        { "title": "التشطيب النهائي", "description": "تنظيف الفواصل والتأكد من عدم وجود فقاعات هواء" }
+      ],
+      "priceNote": "السعر حسب نوع الورق والمساحة - اطلب عرض سعر مخصص",
+      "metaTitle": "ورق جدران الرياض | تركيب ورق حائط ثلاثي الأبعاد - أبو أصالة",
+      "metaDescription": "تركيب ورق جدران وورق حائط ثلاثي الأبعاد بالرياض بأحدث التصاميم العصرية والفندقية. اطلب عرض سعر ومعاينة مجانية.",
+      "keywords": ["ورق جدران الرياض", "ورق حائط الرياض", "ورق جدران ثلاثي الابعاد الرياض", "تركيب ورق جدران بالرياض", "اسعار ورق الجدران بالرياض", "ورق جدران فندقي بالرياض", "معلم ورق جدران الرياض", "سعر متر ورق الجدران مع التركيب"],
+      "isActive": true
+    },
+    {
+      "id": "srv_marble_alt",
+      "name": "بديل الرخام للجدران الرياض",
+      "slug": "marble-alternative-riyadh",
+      "categoryId": "cat_marble_alt",
+      "shortDescription": "تركيب بديل الرخام للجدران والمداخل وخلفيات التلفزيون بالرياض",
+      "content": "[TODO: expand to 1600-2400 كلمة] محتوى عن بديل الرخام للجدران، بديل رخام أوبن بوك، ديكور مداخل وخلفيات تلفزيون ببديل الرخام، مقارنة السعر مع الرخام الطبيعي.",
+      "heroImage": "https://res.cloudinary.com/dfhecwiib/image/upload/v1784038354/f1cfa6f9-8b3e-4654-8729-8aaf00f54923_qhyxvw.png",
+      "gallery": ["https://res.cloudinary.com/dfhecwiib/image/upload/v1784038354/f1cfa6f9-8b3e-4654-8729-8aaf00f54923_qhyxvw.png"],
+      "steps": [
+        { "title": "قياس المساحة", "description": "تحديد مساحة الحائط أو خلفية التلفزيون المطلوب تنفيذها" },
+        { "title": "اختيار التصميم", "description": "اختيار درجة اللون ونمط العروق (أوبن بوك، ثلاثي الأبعاد)" },
+        { "title": "تجهيز السطح", "description": "تسوية الحائط والتأكد من استوائه" },
+        { "title": "التركيب النهائي", "description": "قص وتركيب ألواح بديل الرخام بمحاذاة دقيقة بين القطع" }
+      ],
+      "priceNote": "السعر حسب نوع الخامة والمساحة - اطلب عرض سعر مخصص",
+      "metaTitle": "بديل الرخام للجدران الرياض | ديكور مداخل وشاشات - أبو أصالة",
+      "metaDescription": "تركيب بديل الرخام للجدران والمداخل وخلفيات التلفزيون بالرياض بمظهر فاخر وتكلفة أقل من الرخام الطبيعي. اطلب عرض سعر الآن.",
+      "keywords": ["بديل الرخام الرياض", "بديل الرخام للجدران الرياض", "ديكور تلفزيون بديل الرخام", "بديل رخام جدران الرياض", "اسعار بديل الرخام بالرياض", "بديل الرخام اوبن بوك", "تركيب بديل الرخام الرياض", "سعر متر بديل الرخام الرياض"],
+      "isActive": true
+    },
+    {
+      "id": "srv_mirrors_tv",
+      "name": "ديكور مرايا وشاشات تلفزيون الرياض",
+      "slug": "mirrors-tv-wall-decor-riyadh",
+      "categoryId": "cat_mirrors_tv",
+      "shortDescription": "تصميم وتركيب ديكورات مرايا مضيئة وخلفيات شاشات تلفزيون مودرن بالرياض",
+      "content": "[TODO: expand to 1600-2400 كلمة] محتوى عن مرايا ديكورية مضيئة، خلفيات تلفزيون مودرن، دمج المرايا مع بديل الخشب والرخام، إضاءة LED خلف المرايا والشاشات.",
+      "heroImage": "https://res.cloudinary.com/dfhecwiib/image/upload/v1784038398/e11bb88e-5a6c-470e-a55e-a396a4c6ab13_j2dkyj.png",
+      "gallery": ["https://res.cloudinary.com/dfhecwiib/image/upload/v1784038398/e11bb88e-5a6c-470e-a55e-a396a4c6ab13_j2dkyj.png"],
+      "steps": [
+        { "title": "تصميم الديكور", "description": "تحديد شكل المرآة أو خلفية الشاشة المناسبة للمساحة" },
+        { "title": "تجهيز التمديدات", "description": "تمديد إضاءة LED المخفية خلف المرايا أو الشاشة" },
+        { "title": "التركيب", "description": "تثبيت المرايا أو ألواح الخلفية بدقة وأمان" },
+        { "title": "التشغيل والتسليم", "description": "تشغيل الإضاءة والتأكد من التناسق مع الديكور المحيط" }
+      ],
+      "priceNote": "السعر حسب المقاس والتصميم - اطلب عرض سعر مخصص",
+      "metaTitle": "ديكور مرايا وشاشات تلفزيون الرياض | إضاءة LED - أبو أصالة",
+      "metaDescription": "تصميم وتركيب ديكورات مرايا مضيئة وخلفيات شاشات تلفزيون مودرن بالرياض مع إضاءة LED مخفية. اطلب عرض سعر ومعاينة مجانية.",
+      "keywords": ["ديكور مرايا الرياض", "مرايا مضيئة ديكور بالرياض", "ديكور شاشة تلفزيون الرياض", "خلفيات تلفزيون مودرن الرياض", "مرايا جدارية بإضاءة LED", "تركيب مرايا ديكورية بالرياض", "معلم مرايا الرياض", "اشكال مرايا جدارية"],
+      "isActive": true
+    }
+  ],
+
+  "projects": [
+    { "id": "prj_01", "title": "تجليد حوائط مودرن بألواح بديل الخشب والرخام", "slug": "modern-wall-cladding-wood-marble-alternative", "projectType": "VILLA", "categoryId": "cat_proj_walls", "afterImage": "https://res.cloudinary.com/dfhecwiib/image/upload/v1784038410/d6da46a1-adc4-4071-883d-1e1748a432f7_e0jiei.png", "gallery": ["https://res.cloudinary.com/dfhecwiib/image/upload/v1784038410/d6da46a1-adc4-4071-883d-1e1748a432f7_e0jiei.png"], "metaTitle": "تجليد حوائط بديل الخشب والرخام | معرض أعمالنا - أبو أصالة", "metaDescription": "تنفيذ تجليد حوائط مودرن بديل الخشب وبديل الرخام لفيلا بالرياض بتصميم عصري فاخر.", "isFeatured": true },
+    { "id": "prj_02", "title": "تجليد حوائط بديل الرخام أوبن بوك للصالات", "slug": "open-book-marble-alternative-wall-cladding", "projectType": "VILLA", "categoryId": "cat_proj_walls", "afterImage": "https://res.cloudinary.com/dfhecwiib/image/upload/v1784038546/0253e5c5-aa83-4f33-b295-f77c3e263a91_d9x9k6.png", "gallery": ["https://res.cloudinary.com/dfhecwiib/image/upload/v1784038546/0253e5c5-aa83-4f33-b295-f77c3e263a91_d9x9k6.png"], "metaTitle": "تجليد حوائط بديل الرخام أوبن بوك | معرض أعمالنا - أبو أصالة", "metaDescription": "تنفيذ تجليد جدران بديل رخام بنمط أوبن بوك لصالة استقبال فاخرة بالرياض.", "isFeatured": true },
+    { "id": "prj_03", "title": "تجليد حوائط ديكورية مع إضاءة بروفايل ليد مخفية", "slug": "wall-cladding-hidden-led-profile-lighting", "projectType": "APARTMENT", "categoryId": "cat_proj_walls", "afterImage": "https://res.cloudinary.com/dfhecwiib/image/upload/v1784038583/e4724dc9-9abe-499b-a581-8de2a7d2baaf_x69zr7.png", "gallery": ["https://res.cloudinary.com/dfhecwiib/image/upload/v1784038583/e4724dc9-9abe-499b-a581-8de2a7d2baaf_x69zr7.png"], "metaTitle": "تجليد جدران بإضاءة بروفايل ليد مخفية | أبو أصالة", "metaDescription": "تصميم جدار ديكوري مع بروفايل إضاءة LED مخفية يضيف عمق وفخامة للمساحة.", "isFeatured": false },
+    { "id": "prj_04", "title": "خلفية تلفزيون مودرن بتجليد بديل الخشب", "slug": "modern-tv-wall-wood-alternative-cladding", "projectType": "APARTMENT", "categoryId": "cat_proj_tv_walls", "afterImage": "https://res.cloudinary.com/dfhecwiib/image/upload/v1784038590/fb40b1e8-7ee0-4ab4-92bc-adff3536f0a5_frswqe.png", "gallery": ["https://res.cloudinary.com/dfhecwiib/image/upload/v1784038590/fb40b1e8-7ee0-4ab4-92bc-adff3536f0a5_frswqe.png"], "metaTitle": "ديكور خلفية تلفزيون مودرن بديل خشب | أبو أصالة", "metaDescription": "تنفيذ خلفية تلفزيون مودرن بتكسية بديل الخشب لصالة معيشة عصرية بالرياض.", "isFeatured": true },
+    { "id": "prj_05", "title": "ديكور مدخل فيلا مودرن ببديل الخشب وبديل الرخام مع مرآة مضيئة", "slug": "villa-entrance-decor-wood-marble-mirror", "projectType": "VILLA", "categoryId": "cat_proj_entrance", "afterImage": "https://res.cloudinary.com/dfhecwiib/image/upload/v1784038902/02f8a02a-1723-4fab-8e42-e03eafc6de25_ad3dim.png", "gallery": ["https://res.cloudinary.com/dfhecwiib/image/upload/v1784038902/02f8a02a-1723-4fab-8e42-e03eafc6de25_ad3dim.png"], "metaTitle": "ديكور مدخل فيلا مودرن بديل خشب ورخام | أبو أصالة", "metaDescription": "تصميم مدخل فيلا مودرن يجمع بديل الخشب وبديل الرخام مع مرآة مضيئة تعطي انطباع فخم من أول نظرة.", "isFeatured": true },
+    { "id": "prj_06", "title": "ديكور شاشة تلفزيون بديل رخام رمادي وبديل خشب مع إضاءة LED", "slug": "tv-wall-grey-marble-alternative-wood-led", "projectType": "APARTMENT", "categoryId": "cat_proj_tv_walls", "afterImage": "https://res.cloudinary.com/dfhecwiib/image/upload/v1784039046/18d9d3aa-be99-4981-b388-c9041760ed7e_ahoj7y.png", "gallery": ["https://res.cloudinary.com/dfhecwiib/image/upload/v1784039046/18d9d3aa-be99-4981-b388-c9041760ed7e_ahoj7y.png"], "metaTitle": "ديكور شاشة تلفزيون بديل رخام رمادي مع إضاءة LED | أبو أصالة", "metaDescription": "تنفيذ خلفية شاشة تلفزيون بدمج بديل الرخام الرمادي مع بديل الخشب وإضاءة LED مخفية.", "isFeatured": false },
+    { "id": "prj_07", "title": "ديكور جدار مودرن ألواح ثلاثية الأبعاد (3D) مع تكسيات بديل الخشب", "slug": "modern-wall-decor-3d-panels-wood-cladding", "projectType": "APARTMENT", "categoryId": "cat_proj_walls", "afterImage": "https://res.cloudinary.com/dfhecwiib/image/upload/v1784039087/b22ad56a-2a3f-4593-8fb2-cce04a606c9f_mg4y8v.png", "gallery": ["https://res.cloudinary.com/dfhecwiib/image/upload/v1784039087/b22ad56a-2a3f-4593-8fb2-cce04a606c9f_mg4y8v.png"], "metaTitle": "ديكور جدار ألواح ثلاثية الأبعاد 3D مع بديل الخشب | أبو أصالة", "metaDescription": "تنفيذ ديكور جدار مودرن بألواح 3D مدموجة مع تكسيات بديل الخشب لإضافة عمق بصري للمساحة.", "isFeatured": false },
+    { "id": "prj_08", "title": "دهانات ديكورية ملمس رخامي (ستوكو) مع بديل الخشب", "slug": "stucco-marble-texture-paint-wood-alternative", "projectType": "VILLA", "categoryId": "cat_proj_walls", "afterImage": "https://res.cloudinary.com/dfhecwiib/image/upload/v1784039131/a333e0f9-8efc-4a13-893d-afba42f05d57_om3fto.png", "gallery": ["https://res.cloudinary.com/dfhecwiib/image/upload/v1784039131/a333e0f9-8efc-4a13-893d-afba42f05d57_om3fto.png"], "metaTitle": "دهانات ديكورية ملمس رخامي ستوكو مع بديل الخشب | أبو أصالة", "metaDescription": "تنفيذ دهانات ستوكو بملمس رخامي مودرن مدموجة مع بديل الخشب لتصميم جداري فاخر.", "isFeatured": false },
+    { "id": "prj_09", "title": "ديكور خلفية سرير منجد مخمل مع تكسيات بديل الخشب لغرف النوم", "slug": "upholstered-velvet-headboard-wood-alternative", "projectType": "VILLA", "categoryId": "cat_proj_bedroom", "afterImage": "https://res.cloudinary.com/dfhecwiib/image/upload/v1784039145/5d9a4c8e-37eb-4d04-8e77-7a62c9ad65c3_oec4q4.png", "gallery": ["https://res.cloudinary.com/dfhecwiib/image/upload/v1784039145/5d9a4c8e-37eb-4d04-8e77-7a62c9ad65c3_oec4q4.png"], "metaTitle": "ديكور خلفية سرير منجد مخمل مع بديل الخشب | أبو أصالة", "metaDescription": "تصميم خلفية سرير منجدة بالمخمل مدموجة مع بديل الخشب لغرفة نوم فاخرة بالرياض.", "isFeatured": true },
+    { "id": "prj_10", "title": "أبواب خشب داخلية فخمة مع ديكورات جدارية وإضاءة ليد مخفية", "slug": "luxury-wood-doors-wall-decor-hidden-led", "projectType": "VILLA", "categoryId": "cat_proj_doors", "afterImage": "https://res.cloudinary.com/dfhecwiib/image/upload/v1784039320/42bfffa3-73e9-4ce1-9220-f1c9be13c794_path2z.jpg", "gallery": ["https://res.cloudinary.com/dfhecwiib/image/upload/v1784039320/42bfffa3-73e9-4ce1-9220-f1c9be13c794_path2z.jpg"], "metaTitle": "أبواب خشب داخلية فخمة وديكورات جدارية مضيئة | أبو أصالة", "metaDescription": "تركيب أبواب خشب داخلية فاخرة مع ديكورات جدارية وإضاءة LED مخفية لمدخل فيلا بالرياض.", "isFeatured": false },
+    { "id": "prj_11", "title": "تنسيق إضاءة جدارية مودرن للمجالس", "slug": "modern-wall-lighting-majlis", "projectType": "APARTMENT", "categoryId": "cat_proj_majlis", "afterImage": "https://res.cloudinary.com/dfhecwiib/image/upload/v1784039348/11352b71-fe3b-45ec-a552-91bfc050b414_phu3y0.png", "gallery": ["https://res.cloudinary.com/dfhecwiib/image/upload/v1784039348/11352b71-fe3b-45ec-a552-91bfc050b414_phu3y0.png"], "metaTitle": "تنسيق إضاءة جدارية مودرن للمجالس | أبو أصالة", "metaDescription": "تصميم وتركيب إضاءة جدارية مودرن لمجلس بالرياض تضفي أجواء دافئة وأنيقة.", "isFeatured": false },
+    { "id": "prj_12", "title": "ديكور جدار تلفزيون مودرن بديل الخشب مع ألواح مضيئة خلف الشاشة", "slug": "tv-wall-wood-alternative-illuminated-panels", "projectType": "APARTMENT", "categoryId": "cat_proj_tv_walls", "afterImage": "https://res.cloudinary.com/dfhecwiib/image/upload/v1784039356/49881f8f-f131-4fdc-ba20-b93148e78e85_vzqfnj.png", "gallery": ["https://res.cloudinary.com/dfhecwiib/image/upload/v1784039356/49881f8f-f131-4fdc-ba20-b93148e78e85_vzqfnj.png"], "metaTitle": "ديكور جدار تلفزيون بديل خشب بألواح مضيئة خلف الشاشة | أبو أصالة", "metaDescription": "تنفيذ خلفية تلفزيون بديل خشب مع ألواح إضاءة مخفية خلف الشاشة لصالة مودرن.", "isFeatured": false },
+    { "id": "prj_13", "title": "تجليد جدران صالات مودرن ببديل الخشب مع ألواح الإضاءة الرأسية", "slug": "modern-majlis-wall-cladding-vertical-lighting", "projectType": "VILLA", "categoryId": "cat_proj_majlis", "afterImage": "https://res.cloudinary.com/dfhecwiib/image/upload/v1784039446/d74594f9-341c-404b-8ee7-44b41a4a64eb_dgqykv.png", "gallery": ["https://res.cloudinary.com/dfhecwiib/image/upload/v1784039446/d74594f9-341c-404b-8ee7-44b41a4a64eb_dgqykv.png"], "metaTitle": "تجليد جدران صالات مودرن ببديل الخشب وإضاءة رأسية | أبو أصالة", "metaDescription": "تصميم جدار صالة مودرن بديل خشب مدمج مع ألواح إضاءة رأسية لتصميم عصري متكامل.", "isFeatured": false },
+    { "id": "prj_14", "title": "تكسيات جدارية ممتدة مع إنارة ليد مخفية لفلل ومجالس مودرن", "slug": "extended-wall-cladding-hidden-led-villas-majlis", "projectType": "VILLA", "categoryId": "cat_proj_majlis", "afterImage": "https://res.cloudinary.com/dfhecwiib/image/upload/v1784039457/109dbf35-1dd6-43db-8d66-26d2b4570afe_emraop.png", "gallery": ["https://res.cloudinary.com/dfhecwiib/image/upload/v1784039457/109dbf35-1dd6-43db-8d66-26d2b4570afe_emraop.png"], "metaTitle": "تكسيات جدارية ممتدة بإضاءة ليد مخفية لفلل ومجالس | أبو أصالة", "metaDescription": "تنفيذ تكسيات جدارية ممتدة عبر الجدار كامل مع إنارة LED مخفية لمجلس فيلا فاخرة.", "isFeatured": true },
+    { "id": "prj_15", "title": "تنسيق جدران ريسبشن وبانوهات خشبية بيج مع إضاءة سبوت لايت جدارية", "slug": "reception-wall-wood-panels-beige-spotlight", "projectType": "OFFICE", "categoryId": "cat_proj_entrance", "afterImage": "https://res.cloudinary.com/dfhecwiib/image/upload/v1784039484/ca3bd8a8-89ca-40c3-997c-523d25eaf732_zxievc.png", "gallery": ["https://res.cloudinary.com/dfhecwiib/image/upload/v1784039484/ca3bd8a8-89ca-40c3-997c-523d25eaf732_zxievc.png"], "metaTitle": "تنسيق جدار ريسبشن ببانوهات خشبية بيج وسبوت لايت | أبو أصالة", "metaDescription": "تصميم جدار ريسبشن بمكتب بالرياض ببانوهات خشبية بيج وإضاءة سبوت لايت جدارية أنيقة.", "isFeatured": false },
+    { "id": "prj_16", "title": "تجليد جدران مودرن ببديل الرخام وبديل الخشب مع شرائح ستيل ذهبي", "slug": "modern-wall-cladding-marble-wood-gold-steel", "projectType": "VILLA", "categoryId": "cat_proj_walls", "afterImage": "https://res.cloudinary.com/dfhecwiib/image/upload/v1784039544/3fa3a3f3-0eb3-41d9-a95c-65b5fc7cddf9_chddml.png", "gallery": ["https://res.cloudinary.com/dfhecwiib/image/upload/v1784039544/3fa3a3f3-0eb3-41d9-a95c-65b5fc7cddf9_chddml.png"], "metaTitle": "تجليد جدران بديل رخام وخشب مع شرائح ستيل ذهبي | أبو أصالة", "metaDescription": "تنفيذ تجليد جداري فاخر يجمع بديل الرخام وبديل الخشب مع لمسات شرائح ستيل ذهبي.", "isFeatured": true },
+    { "id": "prj_17", "title": "تجليد جدران مودرن بتصميم منحني مضيء مع تكسيات بديل الخشب", "slug": "modern-wall-cladding-curved-illuminated-wood", "projectType": "APARTMENT", "categoryId": "cat_proj_walls", "afterImage": "https://res.cloudinary.com/dfhecwiib/image/upload/v1784039601/afb9db8b-fd2e-45c1-b336-ac4b7b2930f1_nympu0.png", "gallery": ["https://res.cloudinary.com/dfhecwiib/image/upload/v1784039601/afb9db8b-fd2e-45c1-b336-ac4b7b2930f1_nympu0.png"], "metaTitle": "تجليد جدران بتصميم منحني مضيء مع بديل الخشب | أبو أصالة", "metaDescription": "تنفيذ جدار ديكوري بتصميم منحني مضيء مدمج مع بديل الخشب لإطلالة عصرية مميزة.", "isFeatured": false },
+    { "id": "prj_18", "title": "تجليد جدران صالات فخمة ببديل الرخام وبديل الخشب مع أرفف مضيئة", "slug": "luxury-majlis-wall-cladding-illuminated-shelves", "projectType": "VILLA", "categoryId": "cat_proj_majlis", "afterImage": "https://res.cloudinary.com/dfhecwiib/image/upload/v1784039621/56dc02a7-84cd-4955-911f-8e599334da16_k5tdcy.png", "gallery": ["https://res.cloudinary.com/dfhecwiib/image/upload/v1784039621/56dc02a7-84cd-4955-911f-8e599334da16_k5tdcy.png"], "metaTitle": "تجليد جدران صالة فخمة ببديل الرخام والخشب وأرفف مضيئة | أبو أصالة", "metaDescription": "تصميم جدار صالة فاخرة يجمع بديل الرخام وبديل الخشب مع أرفف عرض مضيئة مدمجة.", "isFeatured": false },
+    { "id": "prj_19", "title": "ديكور جدار تلفزيون مودرن قص مائل بديل الخشب مع كونسول معلق", "slug": "modern-tv-wall-angled-cut-floating-console", "projectType": "APARTMENT", "categoryId": "cat_proj_tv_walls", "afterImage": "https://res.cloudinary.com/dfhecwiib/image/upload/v1784039638/21377b76-b243-4a31-a781-f286e08af195_fihtjw.png", "gallery": ["https://res.cloudinary.com/dfhecwiib/image/upload/v1784039638/21377b76-b243-4a31-a781-f286e08af195_fihtjw.png"], "metaTitle": "ديكور تلفزيون بديل خشب قص مائل مع كونسول معلق | أبو أصالة", "metaDescription": "تنفيذ خلفية تلفزيون بديل خشب بقصة مائلة مودرن مع كونسول تلفزيون معلق أنيق.", "isFeatured": false }
+  ]
+}

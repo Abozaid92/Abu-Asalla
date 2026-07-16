@@ -1,0 +1,340 @@
+// ============================================================
+// Prisma Schema — موقع "أبو أصالة للدهانات والديكور" (الرياض)
+// نوع الموقع: Service + Portfolio + Lead Generation — لا يوجد بيع أونلاين
+// ============================================================
+// هذا الملف مبني من الصفر اعتمادًا على schema مشروع "مطن الريف" (متجر إلكتروني)
+// اللي بعته لي. القرار: مانحتفظش بأي حاجة خاصة بالتجارة الإلكترونية لأن
+// هذا الموقع Lead Gen بحت (التحويل = فورم طلب عرض سعر + واتساب، مفيش سلة/دفع).
+//
+// اتشال بالكامل: Cart, Order, OrderItem, Coupon, UserCoupon, Favorite,
+//   Account/Session (هنستخدم NextAuth v5 + Credentials + JWT session، مش Database
+//   session، فمش محتاجين جدول Account/Session أصلاً)
+//   Analytics/AnalyticsVisits/ProductAnalyticsByDay/ChartAnalytics* (كل الإحصائيات
+//   المعقدة — لو احتجت عداد زيارات بسيط قوله وأضيفه لاحقًا كحقل واحد بس)
+//   chatBotMessage, verificationToken, forgetPassword (مفيش تسجيل دخول عام
+//   أصلاً غير الأدمن، ومفيش نسيان باسورد لعميل حقيقي)
+//   Announcement (مش موجودة في السايت ماب المطلوب، تقدر تضيفها لاحقًا لو احتجت
+//   بانر إعلاني فوق الهيدر)
+//
+// اتحول appointment القديم → QuoteRequest (بديل مباشر، نفس الفكرة بالظبط لكن
+// بحقول تخدم فورم طلب عرض السعر المطلوب في السبك).
+// ============================================================
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ---------------- Enums ----------------
+
+enum CategoryScope {
+  SERVICE
+  PROJECT
+}
+
+enum ProjectType {
+  VILLA
+  APARTMENT
+  OFFICE
+  COMMERCIAL
+  OTHER // للمشاريع المستوردة من مصادر خارجية (زي انستجرام) قبل ما الأدمن يصنّفها يدويًا
+}
+
+enum QuoteStatus {
+  UNREAD
+  READ
+  CONTACTED
+  CLOSED
+}
+
+enum FaqScope {
+  GENERAL
+  SERVICE
+  PROJECT
+}
+
+enum BlogPostStatus {
+  DRAFT
+  PUBLISHED
+  SCHEDULED
+  ARCHIVED
+}
+
+enum BlogActivityAction {
+  CREATED
+  UPDATED
+  PUBLISHED
+  ARCHIVED
+  DELETED
+}
+
+// ---------------- Admin (تسجيل دخول للأدمن فقط) ----------------
+// مفيش User/Account عامين. AdminUser بس، عبر NextAuth Credentials + bcrypt + JWT session
+// (مش Database session)، عشان كده مفيش حاجة لجدول Session/Account هنا خالص.
+
+model AdminUser {
+  id           String            @id @default(cuid())
+  name         String
+  email        String            @unique
+  password     String            // bcrypt hash — الأدمن الأول بيتزرع عبر seed script من env
+  image        String?
+  blogPosts    BlogPost[]
+  activityLogs PostActivityLog[]
+  createdAt    DateTime          @default(now())
+  updatedAt    DateTime          @updatedAt
+
+  @@map("admin_users")
+}
+
+// ---------------- تصنيفات عامة (قسم رئيسي/فرعي) ----------------
+// جدول واحد ذاتي العلاقة (زي الأصلي بالظبط) بيتستخدم لتصنيف الخدمات
+// والمشاريع مع بعض عبر حقل scope. ده هو اللي طلبته في صفحة الأدمن
+// "إضافة قسم رئيسي وفرعي".
+
+model Category {
+  id        String        @id @default(cuid())
+  name      String
+  slug      String        @unique
+  scope     CategoryScope
+  image     String?
+  parentId  String?
+  parent    Category?     @relation("SubCategory", fields: [parentId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  children  Category[]    @relation("SubCategory")
+  services  Service[]
+  projects  Project[]
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+
+  @@index([parentId])
+  @@index([scope])
+}
+
+// ---------------- الخدمات — صفحة مستقلة لكل خدمة /خدمات/[slug] ----------------
+
+model Service {
+  id               String         @id @default(cuid())
+  name             String
+  slug             String         @unique
+  shortDescription String?
+  content          String         @db.Text // 1600-2400 كلمة، محتوى فريد فعليًا
+  contentBlocks Json?   // جديد — أقسام structured للعرض المبهر بصريًا
+  heroImage        String
+  gallery          String[]       // معرض صور خاص بالخدمة دي بس (مش صور عشوائية)
+  steps            Json?          // [{ title, description }] → HowTo schema
+  priceNote        String?        // نطاق تقريبي أو "اطلب عرض سعر مخصص"
+  categoryId       String?
+  category         Category?      @relation(fields: [categoryId], references: [id])
+  projects         Project[]
+  faqs             Faq[]
+  testimonials     Testimonial[]
+  quoteRequests    QuoteRequest[]
+  metaTitle        String
+  metaDescription  String
+  keywords         String[]
+  isActive         Boolean        @default(true)
+  createdAt        DateTime       @default(now())
+  updatedAt        DateTime       @updatedAt
+
+  @@index([isActive])
+  @@index([categoryId])
+}
+
+// ---------------- معرض الأعمال (Case Studies) ----------------
+// ملحوظة تسمية مهمة: في رسالتك بتسمي ده "منتج" وطلبت صفحة أدمن "إضافة منتج"
+// مع صورة قبل/بعد ومعرض. الموقع ده مفيهوش منتجات بيع فعلية، اللي فيه هو
+// "مشاريع" (أعمال منفذة) في معرض الأعمال — فسميت الموديل Project عشان الاسم
+// يطابق المعنى الحقيقي في الكود والـ API، لكن قولت للـ AI اللي هيبني الواجهة
+// (في PROMPT.md) إنه يقدر يسمي label الصفحة في الأدمن "إضافة عمل" أو "إضافة
+// منتج" حسب راحتك — ده تفصيل تسمية واجهة بسيط ومش هيغير من الـ schema حاجة.
+
+model Project {
+  id              String      @id @default(cuid())
+  title           String
+  slug            String      @unique
+  projectType     ProjectType
+  categoryId      String?
+  category        Category?   @relation(fields: [categoryId], references: [id])
+  serviceId       String?
+  service         Service?    @relation(fields: [serviceId], references: [id])
+  areaId          String?
+  area            Area?       @relation(fields: [areaId], references: [id])
+
+  beforeImage     String?     // اختياري
+  afterImage      String?     // اختياري
+  gallery         String[]    // 10-20 صورة؛ لو مفيش قبل/بعد فعلي ارفع صور جيدة عادية بدلاً منه
+  videoUrl        String?     // اختياري
+  sourceUrl       String?     @unique // رابط المصدر الأصلي (مثلاً رابط ريل إنستجرام) — يُستخدم لمنع الاستيراد المكرر لنفس المشروع
+
+  durationNote    String?
+  challenge       String?     @db.Text
+  solution        String?     @db.Text
+
+  isFeatured      Boolean     @default(false) // يظهر في قسم "أعمالنا" بالرئيسية (6-8 مشاريع)
+  metaTitle       String?
+  metaDescription String?
+
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+
+  @@index([projectType])
+  @@index([serviceId])
+  @@index([areaId])
+  @@index([isFeatured])
+}
+
+// ---------------- صفحات المناطق (Local SEO) /مناطق/[city-slug] ----------------
+
+model Area {
+  id              String    @id @default(cuid())
+  name            String    // مثال: "حي الملقا"
+  slug            String    @unique
+  content         String    @db.Text
+  heroImage       String?
+  projects        Project[]
+  metaTitle       String
+  metaDescription String
+  keywords        String[]
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+}
+
+// ---------------- الأسئلة الشائعة ----------------
+
+model Faq {
+  id        String   @id @default(cuid())
+  question  String
+  answer    String   @db.Text
+  scope     FaqScope @default(GENERAL)
+  serviceId String?
+  service   Service? @relation(fields: [serviceId], references: [id], onDelete: Cascade)
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([scope])
+  @@index([serviceId])
+}
+
+// ---------------- آراء العملاء ----------------
+// عمدًا isPublished افتراضيًا false: مفيش تعليقات وهمية في هذا الملف. اطلب
+// من العميل تقييمات حقيقية (حتى لو قليلة) وحطها هنا، أو استورد تقييمات جوجل
+// الحقيقية بعد ما يبقى عنده Google Business Profile. تفاصيل السبب في REQUIREMENTS.md.
+
+model Testimonial {
+  id          String   @id @default(cuid())
+  authorName  String
+  authorArea  String?  // "حي النرجس" مثلاً — بدون بيانات حساسة
+  content     String   @db.Text
+  rating      Int      @default(5)
+  videoUrl    String?
+  serviceId   String?
+  service     Service? @relation(fields: [serviceId], references: [id])
+  isPublished Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([isPublished])
+  @@index([serviceId])
+}
+
+// ---------------- فورم طلب عرض السعر (بديل appointment/Order القديم) ----------------
+
+model QuoteRequest {
+  id        String      @id @default(cuid())
+  name      String
+  phone     String      // يتحقق من صيغة +9665XXXXXXXX في Zod schema
+  serviceId String?
+  service   Service?    @relation(fields: [serviceId], references: [id])
+  areaText  String?     // نص حر لو مفيش Area مطابقة بالضبط
+  images    String[]    // رفع اختياري لصور المكان (Cloudinary)
+  notes     String?     @db.Text
+  status    QuoteStatus @default(UNREAD)
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
+
+  @@index([status, createdAt(sort: Desc)])
+  @@index([serviceId])
+}
+
+// ---------------- المدونة (زي الأصلي تقريبًا، مبسطة) ----------------
+
+model BlogPost {
+  id              String            @id @default(cuid())
+  title           String
+  slug            String            @unique
+  content         Json              // Tiptap JSON — ما بيتعرضش خام للعامة
+  contentHtml     String?           @db.Text
+  excerpt         String?
+  coverImage      String?
+  metaTitle       String?
+  metaDescription String?
+  keywords        String[]
+  status          BlogPostStatus    @default(DRAFT)
+  publishedAt     DateTime?
+  viewCount       Int               @default(0)
+  readingTime     Int               @default(0)
+  authorId        String
+  author          AdminUser         @relation(fields: [authorId], references: [id])
+  categoryId      String?
+  category        BlogCategory?     @relation(fields: [categoryId], references: [id])
+  tags            BlogTag[]
+  activityLogs    PostActivityLog[]
+  createdAt       DateTime          @default(now())
+  updatedAt        DateTime         @updatedAt
+
+  @@index([status, publishedAt(sort: Desc)])
+  @@index([categoryId])
+  @@index([authorId])
+}
+
+model BlogCategory {
+  id          String     @id @default(cuid())
+  name        String
+  slug        String     @unique
+  description String?
+  color       String     @default("#2b2b28")
+  posts       BlogPost[]
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+}
+
+model BlogTag {
+  id        String     @id @default(cuid())
+  name      String
+  slug      String     @unique
+  posts     BlogPost[]
+  createdAt DateTime   @default(now())
+}
+
+model PostActivityLog {
+  id        String             @id @default(cuid())
+  postId    String
+  post      BlogPost           @relation(fields: [postId], references: [id], onDelete: Cascade)
+  action    BlogActivityAction
+  adminId   String
+  admin     AdminUser          @relation(fields: [adminId], references: [id])
+  metadata  Json?
+  createdAt DateTime           @default(now())
+
+  @@index([postId, createdAt(sort: Desc)])
+}
+
+// ---------------- إعدادات الموقع (Singleton) ----------------
+// اقتراح إضافي مني (مش مطلوب صراحة في السبك): صف واحد ثابت يخليك تغيّر رقم
+// الواتساب / رابط الفيديو / الانستجرام / ساعات العمل من لوحة التحكم من غير
+// ما تعمل Deploy. لو مش عايزها احذف الموديل واسيب القيم في env زي ما طلبت أصلاً.
+
+model SiteSettings {
+  id              Int      @id @default(1)
+  whatsappNumber  String   @default("+966553588708")
+  instagramUrl    String?
+  heroVideoUrl    String?
+  yearsExperience Int?
+  projectsCount   Int?
+  workingHours    String?  // نص حر، مثال: "يوميًا 9 ص - 10 م"
+  updatedAt       DateTime @updatedAt
+}

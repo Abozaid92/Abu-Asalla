@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+:root {
+  --surface: #fff;
+  --bg: #f7f6f4;
+  --bg-deep: #f0eee9;
+  --text-1: #1a1a1a;
+  --text-2: #4a4a45;
+  --text-3: #8a8880;
+  --accent: #17161c;
+  --accent-2: #232129;
+  --accent-warm: #c19a5b;
+  --accent-warm-2: #e6c98a;
+  --gold-gradient: linear-gradient(120deg, #b98d4f, #e9cf9b 45%, #b98d4f);
+  --border: rgba(26, 26, 26, 0.11);
+  --shadow: 0 16px 40px rgba(0, 0, 0, 0.09);
+  --shadow-lg: 0 30px 70px rgba(15, 13, 10, 0.18);
+  --radius: 22px;
+  --radius-sm: 14px;
+}
+
+/* خريطة ألوان Tailwind على نفس متغيرات المشروع (نفس الأسماء والقيم بالظبط) */
+@theme inline {
+  --color-surface: var(--surface);
+  --color-bg: var(--bg);
+  --color-bg-deep: var(--bg-deep);
+  --color-text-1: var(--text-1);
+  --color-text-2: var(--text-2);
+  --color-text-3: var(--text-3);
+  --color-accent: var(--accent);
+  --color-accent-2: var(--accent-2);
+  --color-accent-warm: var(--accent-warm);
+  --color-accent-warm-2: var(--accent-warm-2);
+  --color-border: var(--border);
+
+  --radius-project: var(--radius);
+  --radius-project-sm: var(--radius-sm);
+
+  --shadow-project: var(--shadow);
+  --shadow-project-lg: var(--shadow-lg);
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text-1);
+  font-family: "IBM Plex Sans Arabic", Arial, sans-serif;
+  line-height: 1.75;
+}
+.wrap {
+  width: min(1180px, calc(100% - 48px));
+  margin-inline: auto;
+}
