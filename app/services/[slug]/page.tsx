@@ -46,7 +46,6 @@ export default async function ServicePage({
     getGeneralFaqs(),
   ]);
   if (!service) notFound();
-  console.log(service);
   const blocks = parseContentBlocks(service.contentBlocks as any);
 
   // لو الخدمة لسه من غير contentBlocks (مايجريتش لسه)، منرجعش صفحة فاضية —

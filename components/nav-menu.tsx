@@ -148,13 +148,13 @@ export function NavMenu({ services }: { services: ServiceItem[] }) {
         </nav>
 
         <div className="flex items-center gap-[18px]">
-          <a
+          <Link
             className="relative border-0 rounded-full inline-flex items-center justify-center gap-5 py-[15px] px-6 no-underline font-semibold text-sm cursor-pointer transition-[transform,box-shadow] duration-[0.28s] ease overflow-hidden bg-accent text-white before:content-[''] before:absolute before:inset-0 before:bg-[linear-gradient(115deg,transparent,rgba(255,255,255,0.35),transparent)] before:-translate-x-[120%] before:transition-transform before:duration-[0.6s] before:ease hover:before:translate-x-[120%] hover:-translate-y-0.5 hover:shadow-[0_12px_26px_rgba(23,22,28,0.22)] max-[900px]:hidden"
-            href="#quote"
+            href="اتصل-بنا"
           >
-            اطلب عرض سعر{" "}
+            تواصل معنا{" "}
             <span className="text-[19px] leading-none relative">←</span>
-          </a>
+          </Link>
           <button
             className="hidden max-[900px]:flex flex-col justify-center gap-[5px] w-8 h-8 border-0 bg-transparent cursor-pointer p-0"
             aria-label="القائمة"
@@ -242,7 +242,7 @@ export function NavMenu({ services }: { services: ServiceItem[] }) {
             href="#quote"
             onClick={() => setMobileOpen(false)}
           >
-            اطلب عرض سعر{" "}
+            تواصل معنا{" "}
             <span className="text-[19px] leading-none relative">←</span>
           </a>
         </div>

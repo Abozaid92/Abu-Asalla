@@ -229,7 +229,7 @@ async function WhatsAppFloat() {
   const number = settings.whatsappNumber.replace(/[^0-9]/g, "");
   return (
     <a
-      className="fixed left-[22px] bottom-[22px] z-[5] w-14 h-14 rounded-full grid place-items-center bg-[#26a76b] text-white no-underline shadow-[0_14px_30px_rgba(20,90,60,0.35)] animate-[whatsapp-pulse_2.6s_ease-in-out_infinite] hover:scale-[1.06]"
+      className="fixed right-[22px] bottom-[22px] z-[5] w-14 h-14 rounded-full grid place-items-center bg-[#26a76b] text-white no-underline shadow-[0_14px_30px_rgba(20,90,60,0.35)] animate-[whatsapp-pulse_2.6s_ease-in-out_infinite] hover:scale-[1.06]"
       href={`https://wa.me/${number}?text=${encodeURIComponent("مرحباً، أود طلب عرض سعر")}`}
       target="_blank"
       aria-label="تواصل عبر واتساب"

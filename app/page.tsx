@@ -117,7 +117,7 @@ export default async function Home() {
               ✓
             </span>
             <div>
-              <b className="block text-[13px]">ضمان الجودة</b>
+              <b className="block text-[13px]"> </b>
               <small className="text-[11px] text-[var(--text-3)]">
                 متابعة بعد التسليم
               </small>
