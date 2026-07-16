@@ -1,5 +1,10 @@
 import { NextResponse } from "next/server";
-import { auth } from "@/auth";
+import NextAuth from "next-auth";
+import { authConfig } from "@/auth.config";
+
+// نسخة خفيفة من auth تستخدم authConfig فقط (من غير Prisma/bcrypt)
+// عشان تفضل متوافقة مع Edge Runtime وميكبرش حجم الـ middleware
+const { auth } = NextAuth(authConfig);
 
 // خريطة الفولدر العربي (زي ما الزائر شايفه في الرابط) → اسم الفولدر
 // الإنجليزي الحقيقي جوه app/. بنفك تشفير الرابط بنفسنا مرة واحدة بس هنا،
@@ -9,11 +14,11 @@ const routeMap: Record<string, string> = {
   "اتصل-بنا": "contact",
   "الشروط-والأحكام": "terms",
   "الأسئلة-الشائعة": "faq",
-  "المدونة": "blog",
-  "خدمات": "services",
+  المدونة: "blog",
+  خدمات: "services",
   "من-نحن": "about",
-  "اعمالنا": "projects",
-  "مناطق": "areas",
+  اعمالنا: "projects",
+  مناطق: "areas",
   "سياسة-الخصوصية": "privacy",
 };
 
@@ -29,9 +34,6 @@ export default auth((req) => {
   }
 
   // --- تحويل الروابط العربية لفولدرات إنجليزي ---
-  // decodeURIComponent هنا بيفك التشفير مرة واحدة بس بشكل صريح، فبنشتغل
-  // بنص عربي عادي، وبعدين url.pathname = ... بيعيد التشفير بشكل صحيح
-  // تلقائي وبمرة واحدة فقط (اتأكد منها بالاختبار).
   const decodedPath = decodeURIComponent(pathname);
   const segments = decodedPath.split("/").filter(Boolean);
 
